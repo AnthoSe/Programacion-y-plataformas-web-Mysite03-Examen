@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Agrega estilos específicos para la página de administrador */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -10,12 +11,14 @@ body {
     min-height: 100vh;
 }
 
+/* Agrega estilos para el encabezado */
 header {
     background-color: #ffdb58;
     padding: 20px;
     text-align: center;
 }
 
+/* Agrega estilos para el menú de navegación */
 nav {
     background-color: #ffd700;
     padding: 10px;
@@ -35,78 +38,60 @@ nav a:hover {
     color: #333;
 }
 
-section {
+/* Agrega estilos para la sección de administrador */
+.admin-section {
+    flex-grow: 1; /* Esto permite que la sección crezca y ocupe el espacio restante */
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
 
-section[role="banner"] {
-    background-color: white;
-}
-
-.main-content {
-    display: flex;
-    flex-wrap: wrap;
+/* Agrega estilos para la tabla de usuarios */
+table {
     width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-article,
-aside {
-    flex: 0 0 calc(48% - 20px);
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+table, th, td {
+    border: 1px solid #333;
 }
 
-.icon-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+th, td {
+    padding: 10px;
+    text-align: left;
 }
 
-.icon {
-    flex: 0 0 calc(24% - 20px);
-    background-color: #fff;
-    padding: 20px;
-    margin: 0 10px 20px 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+th {
+    background-color: #c1e6c1;
 }
 
-.icon img {
-    width: 24px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-footer {
+/* Agrega estilos para el pie de página */
+.footer {
     background-color: #ffdb58;
     padding: 20px;
     text-align: center;
     position: relative;
+    margin-top: auto; /* Esto empujará el pie de página hacia abajo */
 }
 
-footer ul {
+.footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-footer ul li {
+.footer ul li {
     display: inline-block;
     margin-right: 10px;
 }
 
-footer ul li a {
+.footer ul li a {
     text-decoration: none;
 }
 
-footer ul li a img {
+.footer ul li a img {
     width: 32px;
     height: auto;
 }
