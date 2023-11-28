@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,12 +16,23 @@
     </header>
 
     <nav>
-        <a href="index.jsp">Inicio</a>
-        <a href="#">Sobre Nosotros</a>
-        <a href="#">Tipos de Energía</a>
-        <a href="#">Noticias</a>
-        <a href="#">Contacto</a>
-        <a href="admin">Administrar</a>
+        <nav>
+            <a href="index.jsp">Inicio</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="blog.jsp">Blog</a>
+            <a href="noticias.jsp">Noticias</a>
+            <a href="contactenos.jsp">Contáctenos</a>
+            <a href="login.jsp">Login</a>
+            <div class="perfil-options">
+                <img src="icons/perfil.png" alt="Icono de Perfil" width="32" height="32" />
+                <div class="options-container">
+                    <div class="options">
+                        <a href="#">Configuración</a>
+                        <a href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </nav>
 
     <section class="admin-section">
@@ -35,19 +47,15 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Aquí irá la lógica para mostrar y gestionar la información de los usuarios -->
-                <!-- Por ejemplo, puedes usar JSTL para iterar sobre una lista de usuarios -->
-                <!-- La lista de usuarios puede venir de tu controlador/servicio -->
                 <c:forEach var="user" items="${listaUsuarios}">
                     <tr>
-                        <td>${user.id}</td>
+                        <td>${user.id_per}</td>
                         <td>${user.nombre}</td>
-                        <td>${user.email}</td>
+                        <td>${user.correo}</td>
                         <td>
-                            <!-- Aquí puedes agregar más elementos o acciones según tus necesidades -->
                             <form action="bloquearUsuario" method="post">
-                                <input type="hidden" name="userId" value="${user.id}">
-                                <input type="submit" value="Bloquear">
+                                <input type="hidden" name="userId" value="${user.id_per}">
+                                <input type="submit" value="Bloquear/Desbloquear">
                             </form>
                         </td>
                     </tr>
@@ -57,12 +65,12 @@
     </section>
 
     <footer class="footer">
-        <ul>
-            <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="Facebook"></a></li>
-            <li><a href="https://www.instagram.com"><img src="icons/instagram.png" alt="Instagram"></a></li>
-            <li><a href="https://twitter.com"><img src="icons/twitter.png" alt="Twitter"></a></li>
-        </ul>
-        <p>&copy; 2023 Energía Renovable</p>
+         <ul>
+                <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com"><img src="icons/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://twitter.com"><img src="icons/twitter.png" alt="Twitter"></a></li>
+            </ul>
+            <p>&copy; 2023 Energía Renovable</p>
     </footer>
 </body>
 </html>

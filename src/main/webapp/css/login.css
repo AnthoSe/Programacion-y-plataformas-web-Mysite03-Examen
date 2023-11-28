@@ -1,7 +1,8 @@
 @charset "UTF-8";
-@charset "UTF-8";
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Courier New', monospace;
+     font-size: 18px; 
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -11,14 +12,20 @@ body {
     min-height: 100vh;
 }
 
+header, nav, footer {
+    background: rgb(0,255,220);
+    background: -moz-linear-gradient(144deg, rgba(0,255,220,1) 0%, rgba(224,0,255,1) 100%);
+    background: -webkit-linear-gradient(144deg, rgba(0,255,220,1) 0%, rgba(224,0,255,1) 100%);
+    background: linear-gradient(144deg, rgba(0,255,220,1) 0%, rgba(224,0,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffdc",endColorstr="#e000ff",GradientType=1);
+}
+
 header {
-    background-color: #ffdb58;
     padding: 20px;
     text-align: center;
 }
 
 nav {
-    background-color: #ffd700;
     padding: 10px;
     text-align: center;
 }
@@ -48,8 +55,8 @@ nav a:hover {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Alinea el contenido al centro */
-    margin: auto; /* Centra el cuadro de login */
+    text-align: center;
+    margin: auto;
 }
 
 .login-box h2 {
@@ -111,7 +118,7 @@ nav a:hover {
 }
 
 .login-box input[type="submit"] {
-    background: #ffdb58;
+    background: rgb(128, 255, 0);
     border: none;
     outline: none;
     color: #333;
@@ -119,7 +126,7 @@ nav a:hover {
     cursor: pointer;
     border-radius: 8px;
     transition: background 0.3s;
-    margin-top: 10px; /* Añade espacio arriba del botón */
+    margin-top: 10px;
 }
 
 .login-box input[type="submit"]:hover {
@@ -127,9 +134,9 @@ nav a:hover {
 }
 
 .links {
-    margin-top: 10px; /* Espacio entre los enlaces y el botón */
-    font-size: 14px; /* Letra más pequeña para los enlaces */
-    text-align: center; /* Alinea los enlaces al centro */
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .links a {
@@ -142,7 +149,6 @@ nav a:hover {
 }
 
 .footer {
-    background-color: #ffdb58;
     padding: 20px;
     text-align: center;
     position: relative;

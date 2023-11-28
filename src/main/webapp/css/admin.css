@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* Agrega estilos específicos para la página de administrador */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Courier New', monospace;
+     font-size: 16px; 
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -11,16 +12,23 @@ body {
     min-height: 100vh;
 }
 
+header, nav, footer {
+    background: rgb(0,255,220);
+    background: -moz-linear-gradient(144deg, rgba(0,255,220,1) 0%, rgba(224,0,255,1) 100%);
+    background: -webkit-linear-gradient(144deg, rgba(0,255,220,1) 0%, rgba(224,0,255,1) 100%);
+    background: linear-gradient(144deg, rgba(0,255,220,1) 0%, rgba(224,0,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffdc",endColorstr="#e000ff",GradientType=1);
+}
+
+
 /* Agrega estilos para el encabezado */
 header {
-    background-color: #ffdb58;
     padding: 20px;
     text-align: center;
 }
 
 /* Agrega estilos para el menú de navegación */
 nav {
-    background-color: #ffd700;
     padding: 10px;
     text-align: center;
 }
@@ -69,7 +77,6 @@ th {
 
 /* Agrega estilos para el pie de página */
 .footer {
-    background-color: #ffdb58;
     padding: 20px;
     text-align: center;
     position: relative;

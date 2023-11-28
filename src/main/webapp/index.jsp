@@ -24,11 +24,11 @@
             </h1>
         </header>
         <nav>
-            <a href="#">Inicio</a>
+            <a href="index.jsp">Inicio</a>
             <a href="#">Sobre Nosotros</a>
-            <a href="#">Tipos de Energía</a>
-            <a href="#">Noticias</a>
-            <a href="#">Contacto</a>
+            <a href="blog.jsp">Blog</a>
+            <a href="noticias.jsp">Noticias</a>
+            <a href="contactenos.jsp">Contáctenos</a>
             <a href="login.jsp">Login</a>
         </nav>
         <div class="agrupar">
@@ -63,13 +63,14 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+
+                <h2>Contrata nuestra tarifa de luz con precio fijo más barata</h2>
+                <p>Los constantes cambios en el precio de la luz están afectando a los hogares. Desde Plenitude queremos
+                    acabar con esa incertidumbre ofreciéndote una tarifa fija de luz, barata y sencilla, con la que sepas
+                    lo que vas a pagar. ¡Olvídate de poner lavadoras a altas horas de la madrugada para ahorrar en tu
+                    factura! Te presentamos nuestra Tarifa Fácil, la tarifa de luz que estabas esperando, sin sorpresas
+                    ni permanencias.</p>
             </section>
-            <aside>
-                <div class="informacion">
-                    <h2>Más Información</h2>
-                    <p>Descubre nuestras últimas colecciones y tendencias. ¡Te garantizamos estilo y calidad!</p>
-                </div>
-            </aside>
         </div>
         <section class="icon-section">
             <article class="icon">

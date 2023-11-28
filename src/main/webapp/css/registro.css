@@ -1,13 +1,8 @@
-body {
-    font-family: 'Courier New', monospace;
-    font-size: 16px;
+@charset "UTF-8";
+/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
+body, h1, h2, p, ul, li, form {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 header, nav, footer {
@@ -18,9 +13,32 @@ header, nav, footer {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffdc", endColorstr="#e000ff", GradientType=1);
 }
 
+body {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
 header {
     padding: 20px;
     text-align: center;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-left: 10px;
 }
 
 nav {
@@ -41,59 +59,50 @@ nav a:hover {
     color: #333;
 }
 
-.agrupar {
-    text-align: center;
-}
-
-section {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-section h2 {
-    text-align: center;
-}
-
-.carousel-inner img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-.icon-section {
+section.formulario {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
 
-.icon {
-    flex: 0 0 calc(24% - 20px); /* Ajusta el porcentaje según tus necesidades */
-    background-color: #fff;
-    padding: 20px;
-    margin: 0 5px 20px 5px; /* Reduce el margen para dejar espacio entre los iconos */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+form {
+    width: 300px;
 }
 
-.icon img {
-    width: 48px;
-    height: auto;
-    margin-bottom: 10px;
+label {
+    display: block;
+    margin-bottom: 5px;
 }
 
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
 
 footer {
     padding: 20px;
     text-align: center;
-    margin-top: auto;
+     margin-top: auto;
 }
 
 footer ul {

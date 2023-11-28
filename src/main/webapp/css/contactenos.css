@@ -1,6 +1,8 @@
+@charset "UTF-8";
+
 body {
     font-family: 'Courier New', monospace;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -41,29 +43,34 @@ nav a:hover {
     color: #333;
 }
 
-.agrupar {
-    text-align: center;
-}
-
-section {
-    max-width: 800px;
-    margin: auto;
+.contenido-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
-section h2 {
-    text-align: center;
+.texto {
+    flex: 0 0 calc(60% - 20px);
+    text-align: left;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-.carousel-inner img {
+.texto h2 {
+    margin-bottom: 10px;
+}
+
+.imagen-section {
+    flex: 0 0 calc(30% - 20px);
+}
+
+.imagen-section img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-top: 20px;
 }
 
 .icon-section {
@@ -74,10 +81,10 @@ section h2 {
 }
 
 .icon {
-    flex: 0 0 calc(24% - 20px); /* Ajusta el porcentaje según tus necesidades */
+    flex: 0 0 calc(30% - 20px);
     background-color: #fff;
     padding: 20px;
-    margin: 0 5px 20px 5px; /* Reduce el margen para dejar espacio entre los iconos */
+    margin: 0 10px 20px 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -89,6 +96,40 @@ section h2 {
     margin-bottom: 10px;
 }
 
+.contact-form {
+    text-align: center;
+    padding: 20px;
+    background-color: #272727;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #111;
+    color: #fff;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
 
 footer {
     padding: 20px;

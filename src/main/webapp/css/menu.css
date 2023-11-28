@@ -1,6 +1,8 @@
+@charset "UTF-8";
+
 body {
     font-family: 'Courier New', monospace;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -34,6 +36,8 @@ nav a {
     padding: 10px;
     margin: 0 10px;
     transition: background-color 0.3s;
+    background-color: #f8f8f8; /* Color de fondo inicial */
+    border-radius: 4px;
 }
 
 nav a:hover {
@@ -41,54 +45,76 @@ nav a:hover {
     color: #333;
 }
 
-.agrupar {
-    text-align: center;
+/* Nuevos estilos para el menú mejorado */
+nav .perfil-options {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
+nav .perfil-options img {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+nav .perfil-options .options {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+nav .perfil-options:hover .options {
+    display: block;
+}
+
+nav .perfil-options .options a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+nav .perfil-options .options a:hover {
+    background-color: #c1e6c1;
+    color: #333;
+}
+
+/* Estilos para los botones */
 section {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-section h2 {
-    text-align: center;
-}
-
-.carousel-inner img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-.icon-section {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
     padding: 20px;
 }
 
-.icon {
-    flex: 0 0 calc(24% - 20px); /* Ajusta el porcentaje según tus necesidades */
-    background-color: #fff;
+article {
+    flex: 0 0 calc(48% - 20px); /* 48% para dejar espacio entre los dos artículos */
+    background-color: #f8f8f8;
     padding: 20px;
-    margin: 0 5px 20px 5px; /* Reduce el margen para dejar espacio entre los iconos */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-.icon img {
-    width: 48px;
-    height: auto;
-    margin-bottom: 10px;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+button:hover {
+    background-color: #45a049;
+}
 
 footer {
     padding: 20px;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
     font-family: 'Courier New', monospace;
     font-size: 16px;
@@ -16,6 +17,8 @@ header, nav, footer {
     background: -webkit-linear-gradient(144deg, rgba(0, 255, 220, 1) 0%, rgba(224, 0, 255, 1) 100%);
     background: linear-gradient(144deg, rgba(0, 255, 220, 1) 0%, rgba(224, 0, 255, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffdc", endColorstr="#e000ff", GradientType=1);
+    padding: 20px;
+    text-align: center;
 }
 
 header {
@@ -38,62 +41,89 @@ nav a {
 
 nav a:hover {
     background-color: #c1e6c1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
     color: #333;
+    transition: color 0.3s;
 }
 
-.agrupar {
-    text-align: center;
+nav a:hover {
+    color: #c1e6c1;
 }
 
-section {
-    max-width: 800px;
-    margin: auto;
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
-    background-color: white;
+}
+
+article {
+    flex: 0 0 calc(48% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
-section h2 {
-    text-align: center;
-}
-
-.carousel-inner img {
+article img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-top: 20px;
-}
-
-.icon-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.icon {
-    flex: 0 0 calc(24% - 20px); /* Ajusta el porcentaje según tus necesidades */
-    background-color: #fff;
-    padding: 20px;
-    margin: 0 5px 20px 5px; /* Reduce el margen para dejar espacio entre los iconos */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.icon img {
-    width: 48px;
-    height: auto;
     margin-bottom: 10px;
 }
 
+article h2 {
+    margin-bottom: 10px;
+}
+
+article p {
+    margin-bottom: 10px;
+}
+
+article a {
+    text-decoration: none;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+article a:hover {
+    background-color: #45a049;
+}
+
+aside {
+    flex: 0 0 calc(30% - 20px);
+}
+
+.widget {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 footer {
     padding: 20px;
     text-align: center;
-    margin-top: auto;
+    position: relative;
 }
 
 footer ul {
