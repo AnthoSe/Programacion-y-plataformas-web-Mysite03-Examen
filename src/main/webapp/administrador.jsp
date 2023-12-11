@@ -1,5 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.productos.seguridad.*" %>
+<%@ page import="com.productos.datos.*" %>
+<%@ page import="java.util.List" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<link rel="icon" href="data:,">
+
+
+<%
+    // Crea una instancia de UsuarioDAO y obtén la lista de usuarios
+    Conexion conexion = new Conexion(); // Asegúrate de que la clase Conexion tenga el método crearConexion()
+    UsuarioDAO usuarioDAO = new UsuarioDAO(conexion);
+    List<Usuario> listaUsuarios = usuarioDAO.obtenerUsuarios();
+%>
+<% 
+    System.out.println("Cantidad de usuarios: " + listaUsuarios.size());
+%>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,16 +24,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administrador</title>
     <link rel="stylesheet" href="css/admin.css">
-</head>
+</head> 
 <body>
-    <header>
+  <header>
         <h1>
             EnergySUS<img src="icons/nube.png" alt="Icono de nube" width="32" height="32" />
         </h1>
     </header>
-
     <nav>
-        <nav>
             <a href="index.jsp">Inicio</a>
             <a href="#">Sobre Nosotros</a>
             <a href="blog.jsp">Blog</a>
@@ -33,7 +48,6 @@
                 </div>
             </div>
         </nav>
-    </nav>
 
     <section class="admin-section">
         <h2>Panel de Administrador</h2>
@@ -64,7 +78,7 @@
         </table>
     </section>
 
-    <footer class="footer">
+      <footer class="footer">
          <ul>
                 <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="Facebook"></a></li>
                 <li><a href="https://www.instagram.com"><img src="icons/instagram.png" alt="Instagram"></a></li>

@@ -1,6 +1,5 @@
 package com.productos.datos;
 
-import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -32,14 +31,22 @@ public class Conexion {
             conexion = DriverManager.getConnection(cadena, user, pwd);
             System.out.println("Conexión establecida correctamente a la base de datos: " + cadena);
         } catch (ClassNotFoundException | SQLException e) {
+            // Puedes lanzar la excepción o manejarla de otra manera según tus necesidades
             e.printStackTrace();
         }
         return conexion;
     }
 
-    public ResultSet Consulta(String sql) throws SQLException {
-        java.sql.Statement stmt = con.createStatement();
-        return stmt.executeQuery(sql);
+    public ResultSet consulta(String sql) throws SQLException {
+        try (java.sql.Statement stmt = con.createStatement()) {
+            return stmt.executeQuery(sql);
+        }
     }
 
+    public void cerrarConexion() throws SQLException {
+        if (con != null && !con.isClosed()) {
+            con.close();
+            System.out.println("Conexión cerrada correctamente.");
+        }
+    }
 }

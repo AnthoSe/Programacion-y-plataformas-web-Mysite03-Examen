@@ -24,16 +24,16 @@
 
     <section class="main-content">
         <article>
-            <img src="imagen1.jpg" alt="Imagen 1">
-            <h2>Entrada del Blog 1</h2>
-            <p>Descripción corta de la entrada del blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <img src="imagenes/panel1.jpg" alt="Imagen 1">
+            <h2>Problemas actuales sobre la energia</h2>
+            <p>Actualmente se esta pasando por una crisis de energia en nuestro pais donde los cortes de luz aun aumentando...</p>
             <a href="#">Leer más</a>
         </article>
 
         <article>
-            <img src="imagen2.jpg" alt="Imagen 2">
-            <h2>Entrada del Blog 2</h2>
-            <p>Descripción corta de la entrada del blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <img src="imagenes/panel2.jpg" alt="Imagen 2">
+            <h2>Energia Sustentable</h2>
+            <p>Durante años buscamos la manera de crear nuevas formas de crear energia para nosotros los seres humanos... </p>
             <a href="#">Leer más</a>
         </article>
 

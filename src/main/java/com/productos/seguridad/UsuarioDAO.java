@@ -4,18 +4,22 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.productos.datos.Conexion;
+
 public class UsuarioDAO {
-    private String jdbcURL = "jdbc:postgresql://localhost:5432/tu_base_de_datos";
-    private String jdbcUsuario = "tu_usuario";
-    private String jdbcClave = "tu_clave";
+    private Conexion conexion;
 
     private static final String SELECT_USUARIOS = "SELECT * FROM tb_usuario";
     private static final String BLOQUEAR_USUARIO = "UPDATE tb_usuario SET id_est = ? WHERE id_per = ?";
 
+    public UsuarioDAO(Conexion conexion) {
+        this.conexion = conexion;
+    }
+
     public List<Usuario> obtenerUsuarios() {
         List<Usuario> usuarios = new ArrayList<>();
 
-        try (Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsuario, jdbcClave);
+        try (Connection connection = conexion.crearConexion();
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USUARIOS);
              ResultSet resultSet = preparedStatement.executeQuery()) {
 
@@ -37,8 +41,9 @@ public class UsuarioDAO {
         return usuarios;
     }
 
+
     public boolean bloquearUsuario(int userId, int nuevoEstado) {
-        try (Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsuario, jdbcClave);
+        try (Connection connection = conexion.crearConexion();
              PreparedStatement preparedStatement = connection.prepareStatement(BLOQUEAR_USUARIO)) {
 
             preparedStatement.setInt(1, nuevoEstado);
