@@ -27,23 +27,64 @@ header {
     text-align: center;
 }
 
-/* Agrega estilos para el menú de navegación */
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    text-align: center;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     padding: 10px;
     margin: 0 10px;
+    border-radius: 4px;
     transition: background-color 0.3s;
 }
 
 nav a:hover {
-    background-color: #c1e6c1;
+    background-color: #2ecc71;
+}
+
+nav .perfil-options {
+    display: flex;
+    align-items: center;
+}
+
+nav .perfil-options img {
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Hace que la imagen del perfil sea redonda */
+}
+
+nav .perfil-options .options {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 10px;
+     right: 0;
+}
+
+nav .perfil-options:hover .options {
+    display: block;
+}
+
+nav .perfil-options .options a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
     color: #333;
+    transition: background-color 0.3s;
+}
+
+nav .perfil-options .options a:hover {
+    background-color: #2ecc71;
+    color: #fff;
 }
 
 /* Agrega estilos para la sección de administrador */

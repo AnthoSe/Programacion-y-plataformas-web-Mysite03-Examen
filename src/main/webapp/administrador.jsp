@@ -1,10 +1,10 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.productos.seguridad.*" %>
 <%@ page import="com.productos.datos.*" %>
 <%@ page import="java.util.List" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<link rel="icon" href="data:,">
 
+<link rel="icon" href="data:,">
 
 <%
     // Crea una instancia de UsuarioDAO y obtén la lista de usuarios
@@ -15,7 +15,6 @@
 <% 
     System.out.println("Cantidad de usuarios: " + listaUsuarios.size());
 %>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -34,17 +33,15 @@
     <nav>
             <a href="index.jsp">Inicio</a>
             <a href="#">Sobre Nosotros</a>
-            <a href="blog.jsp">Blog</a>
+            <a href="foro.jsp">Blog</a>
             <a href="noticias.jsp">Noticias</a>
             <a href="contactenos.jsp">Contáctenos</a>
-            <a href="login.jsp">Login</a>
+            
             <div class="perfil-options">
-                <img src="icons/perfil.png" alt="Icono de Perfil" width="32" height="32" />
-                <div class="options-container">
-                    <div class="options">
-                        <a href="#">Configuración</a>
-                        <a href="#">Cerrar Sesión</a>
-                    </div>
+                <img src="icons/perfil.png" alt="Icono de Perfil" width="32" height="32">
+                <div class="options" id="optionsMenu">
+                    <a href="#">Configuración</a>
+                    <a href="cerrarSesion.jsp">Cerrar Sesión</a>
                 </div>
             </div>
         </nav>
